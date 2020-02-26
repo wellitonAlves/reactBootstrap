@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import HomeCard from '../ui/HomeCard'
+import HomeCard from '../ui/HomeCard';
+import {hashHistory} from 'react-router';
 
 class Home extends Component {
 
@@ -7,17 +8,17 @@ class Home extends Component {
     homeCardRelease = {
         title:'Release',
         text:'Manager Release',
-        action: () => alert('release click')
+        action: () => hashHistory.push('/release')
     }
     homeCardBacklog= {
         title:'Backlog',
         text:'Manager Backlog',
-        action: () => alert('Backlog click')
+        action: () => hashHistory.push('/backlog')
     }
     homeCardSprints= {
         title:'Sprints',
         text:'Manager Sprints',
-        action: () => alert('Sprints click')
+        action: () => hashHistory.push('/sprint')
     }
     
 
